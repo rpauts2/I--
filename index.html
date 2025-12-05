@@ -3,62 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Алексей — Личный Хаб</title>
-  <link href="styles.css" rel="stylesheet">
+  <title>Алексей — Личный хаб: дизайн, проекты и всякая фигня</title>
+  <meta name="description" content="Личный хаб Алексея: логотипы, брендинг, эксперименты, архив идей и всякая фигня. Живой цифровой скетчбук.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>Привет, я Алексей 👋</h1>
-    <p>Здесь всё подряд: проекты, идеи и всякая фигня.</p>
-    <nav>
-      <a href="#projects">Проекты</a>
-      <a href="#archive">Архив</a>
-      <a href="#fun">Фигня</a>
-      <a href="#about">Обо мне</a>
-      <a href="#contact">Контакты</a>
-    </nav>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">ALEKSEY</a>
+      <nav class="main-nav">
+        <a href="projects.html">Проекты</a>
+        <a href="archive.html">Архив</a>
+        <a href="fun.html">Фигня</a>
+        <a href="about.html">Обо мне</a>
+        <a href="contact.html" class="cta-link">Контакты</a>
+      </nav>
+      <button id="themeToggle" class="btn ghost small">Тема</button>
+    </div>
   </header>
 
-  <section id="projects">
-    <h2>Проекты</h2>
-    <div class="grid">
-      <div class="card">Логотип «Кинолаб»</div>
-      <div class="card">Streetmark — граффити стиль</div>
-      <div class="card">Minima — минимализм</div>
+  <section class="hero hero-chaos">
+    <div class="container">
+      <h1>Я — Алексей. Здесь хаос, дизайн и всякая фигня.</h1>
+      <p class="sub">Логотипы, брендинг, эксперименты, мемы, заметки. Этот сайт — живой цифровой скетчбук.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn primary">К проектам</a>
+        <a href="fun.html" class="btn ghost">К «фигне»</a>
+      </div>
     </div>
   </section>
 
-  <section id="archive">
-    <h2>Архив идей</h2>
-    <p>Наброски, черновики, визуальные эксперименты.</p>
-    <div class="grid">
-      <div class="card">Скетч 01</div>
-      <div class="card">Скетч 02</div>
+  <main class="board board-chaos" id="board">
+    <!-- Карточки наполняются из content.json -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Алексей. Иваново • Работаю удалённо по миру</p>
     </div>
-  </section>
-
-  <section id="fun">
-    <h2>Фигня</h2>
-    <p>Мемы, заметки, странные картинки.</p>
-    <div class="grid">
-      <div class="card">🐸 Мем про дизайн</div>
-      <div class="card">💡 Случайная мысль</div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>Обо мне</h2>
-    <p>Я — Алексей, дизайнер из Иваново. Люблю смелые решения и чистую идею. Этот сайт — мой цифровой скетчбук.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p>Email: alexey@yourdomain.ru</p>
-    <p>Telegram: @alexey_design</p>
-  </section>
-
-  <footer>
-    <p>© Алексей. Все права защищены.</p>
   </footer>
+
+  <script src="script.js"></script>
+  <script>initBoard();</script>
 </body>
 </html>
